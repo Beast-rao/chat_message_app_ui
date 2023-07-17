@@ -1,3 +1,6 @@
+import 'package:chat_messages_app_ui/routes/routes.dart';
+import 'package:chat_messages_app_ui/screens/chatscreen.dart';
+import 'package:chat_messages_app_ui/screens/signinorsignup.dart';
 import 'package:chat_messages_app_ui/screens/welcome.dart';
 import 'package:chat_messages_app_ui/theme.dart';
 import 'package:flutter/material.dart';
@@ -19,6 +22,15 @@ class MyApp extends StatelessWidget {
       
       debugShowCheckedModeBanner: false,
       home: WelcomeScreen(),
+      initialRoute:MyRoutees.welcomeroute,
+      routes: {
+        // "/":(context)=> WelcomeScreen(),
+        MyRoutees.welcomeroute:(context)=> WelcomeScreen(),
+        MyRoutees.signinroute:(context)=>SigninOrSignupScreen(),
+        MyRoutees.chatroute:(context)=>ChatScreen(),
+
+
+      },
     );
   }
 }
